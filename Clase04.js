@@ -3,6 +3,35 @@ T2C4 Control de Flujo */
 
 /* Cintia Vettorazzi*/
 
+//CONSIGNA if ternario
+
+/*Semaforo peatonal*/
+//supondremos que los colores ingresados son rojo y blanco (ya que solamente se pide validar dos opciones, sin considerar que la respuesta sea incorrecta)
+
+//if ternario
+function semaforoPeatonal (color){
+    color=color.toUpperCase();
+    return (color==="ROJO")? "No avanzo" : "Avanzo";
+}
+console.log("__________SEMAFORO__________");
+console.log("-----if ternario-----");
+console.log(semaforoPeatonal("rojo"));    //v
+console.log(semaforoPeatonal("blanco"));    //f
+
+/*Mayor de edad*/
+
+//if ternario
+function mayorEdad (edad){
+    return (edad<21)? "Menor de edad" : "Mayor de edad";
+}
+console.log("__________Mayor de Edad__________");
+console.log("-----if ternario-----");
+console.log(mayorEdad(5));    //menor
+console.log(mayorEdad(33));    //mayor
+
+
+//EJERCICIOS EXTRA - Control de flujos
+
 /*EJERCICIO NUMERO 1 
 Funcion que retorna "true" si un valor pasado como parametro es par, o "false" si es impar*/
 

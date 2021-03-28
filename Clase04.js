@@ -353,6 +353,23 @@ function precio(tomate, papa, huevo) {
     }
     return base + suma;     //en caso de que no agregue nada, la suma sera 0 y solo se cobrara la base
 }
+//opcion 2 con if comun
+function precio3 (tomate,papa,huevo){
+    let sumaTomate=0;
+    let sumaPapa=0;
+    let sumaHuevo=0;
+    let base=150;
+    if (tomate){
+        sumaTomate=20;
+    }
+    if (papa){
+        sumaPapa=50;
+    }
+    if (huevo){
+        sumaHuevo=60;
+    }
+    return (base+sumaTomate+sumaPapa+sumaHuevo);
+}
 
 //if ternario
 function precio2(tomate, papa, huevo) {
@@ -368,6 +385,15 @@ console.log(precio(false, true, true)); //f,v,v   -->260
 console.log(precio(true, false, false)); //v,f,f  -->170
 console.log(precio(false, false, true)); //f,f,v  -->210
 console.log(precio(false, true, false)); //f,v,f  -->200
+console.log("-----if comun opcion 2-----");
+console.log(precio3(true, true, true)); //v,v,v    -->280
+console.log(precio3(false, false, false)); //f,f,f -->150
+console.log(precio3(true, true, false)); //v,v,f   -->220
+console.log(precio3(true, false, true)); //v,f,v   -->230
+console.log(precio3(false, true, true)); //f,v,v   -->260
+console.log(precio3(true, false, false)); //v,f,f  -->170
+console.log(precio3(false, false, true)); //f,f,v  -->210
+console.log(precio3(false, true, false)); //f,v,f  -->200
 console.log("-----if ternario-----");
 console.log(precio2(true, true, true)); //v,v,v    -->280
 console.log(precio2(false, false, false)); //f,f,f -->150
